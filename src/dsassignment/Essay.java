@@ -16,7 +16,7 @@ public class Essay {
 
 
     String title;
-    String author;
+    Author author;
     String content;
     String date;
     String genre;
@@ -33,18 +33,9 @@ public class Essay {
          ArrayList<String> objectList=new ArrayList(
                  Arrays.asList("cow", "pig" ,"cake","chicken","horse")
                  );
-        ArrayList<String> authorFirstNameList= new ArrayList(
-                Arrays.asList("John", "James", "Alex","Alfredo","Ali","AhMeng")        
-        ); 
-        
-        ArrayList<String> authorLastNameList= new ArrayList(
-                Arrays.asList("Smith", "Fletcher", "Longman","Alfredo","Peanut","Soda")        
-        ); 
-         
-        
-        
+
     }
-        public Essay(String title, String author, String content, String date) {
+        public Essay(String title, Author author, String content, String date) {
         this.title = title;
         this.author = author;
         this.content = content;
