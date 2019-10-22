@@ -13,8 +13,10 @@ import java.util.ArrayList;
  */
 public class EssayList {
     ArrayList<Essay> essayList;
-    EssayList(){
-    
+    EssayList(int count){
+        if(count == 0){
+            //default to 150
+        }    
     //todo generates essay List
     }
     
