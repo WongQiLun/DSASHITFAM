@@ -14,6 +14,8 @@ import java.util.Arrays;
  */
 public class Author {
     String authorName;
+    String authorDOB;
+    
     Author(){
             ArrayList<String> authorFirstNameList= new ArrayList(
                 Arrays.asList("John", "James", "Alex","Alfredo","Ali","AhMeng")        
