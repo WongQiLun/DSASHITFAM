@@ -14,21 +14,22 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author user
  */
 public class DSAssignment {
+         public static ArrayList<Author> authorList = GenerateAuthorList(0);
+         public static ArrayList<Essay> essayList = GenerateEssayList(0, authorList);
+
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ArrayList<Author> authorList =  GenerateAuthorList(0);
-       ArrayList<Essay> essayList = GenerateEssayList(0,authorList);
-      
-   
-   
+        Form.main(args);
+
     }
-        public static ArrayList<Author> GenerateAuthorList(int count) {
+
+    public static ArrayList<Author> GenerateAuthorList(int count) {
         ArrayList<Author> AuthorList = new ArrayList<>();
-        
+
         if (count == 0) {
             //default to 30
             count = 30;
@@ -44,12 +45,13 @@ public class DSAssignment {
         while (count != 0) {
             String authorName1 = authorFirstNameList.get(ThreadLocalRandom.current().nextInt(authorFirstNameList.size()));
             authorName1 += " " + authorLastNameList.get(ThreadLocalRandom.current().nextInt(authorLastNameList.size()));
-            Author author =new Author(authorName1);
+            Author author = new Author(authorName1);
             AuthorList.add(author);
             count--;
         }
         return AuthorList;
     }
+
     public static ArrayList<Essay> GenerateEssayList(int count, ArrayList<Author> authorList) {
         ArrayList<Essay> essayList = new ArrayList<>();
         if (count == 0) {
