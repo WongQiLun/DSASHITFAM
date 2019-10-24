@@ -20,6 +20,7 @@ public class Author {
     String authorName;
     String authorDOB;
 // for reference
+
     Author() {
         ArrayList<String> authorFirstNameList = new ArrayList(
                 Arrays.asList("John", "James", "Alex", "Alfredo", "Ali", "AhMeng")
@@ -50,6 +51,7 @@ public class Author {
         this.authorDOB = authorDOB;
     }
 //use this constructor to prevent over use of memroy
+
     public Author(String authorName) {
         this.authorName = authorName;
         GregorianCalendar gc = new GregorianCalendar();
@@ -65,4 +67,6 @@ public class Author {
         this.authorDOB = fmt.format(gc.getTime());
 
     }
+
+
 }
