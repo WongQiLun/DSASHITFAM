@@ -16,7 +16,9 @@ public class DSAssignment {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        Author x = new Author();
+        System.out.print(x.authorName);
+        System.out.print(x.authorDOB);
     }
     
 }
