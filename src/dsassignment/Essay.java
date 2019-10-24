@@ -88,7 +88,4 @@ public class Essay {
         this.content = content;
         this.date = date;
     }
-
-
-
 }

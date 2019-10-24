@@ -23,7 +23,7 @@ public class DSAssignment {
         ArrayList<Author> authorList =  GenerateAuthorList(0);
        ArrayList<Essay> essayList = GenerateEssayList(0,authorList);
       
-     
+   
    
     }
         public static ArrayList<Author> GenerateAuthorList(int count) {
