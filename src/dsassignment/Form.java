@@ -5,6 +5,8 @@
  */
 package dsassignment;
 
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author user
@@ -46,7 +48,12 @@ public class Form extends javax.swing.JFrame {
 
         jButton3.setText("jButton2");
 
-        jButton4.setText("jButton2");
+        jButton4.setText("Exit");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("jButton2");
 
@@ -87,6 +94,11 @@ public class Form extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        jLabel1.setText(DSAssignment.authorList.get(0).authorName);
     }//GEN-LAST:event_formWindowOpened
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

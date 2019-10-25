@@ -16,8 +16,28 @@ import java.util.concurrent.ThreadLocalRandom;
 public class DSAssignment {
          public static ArrayList<Author> authorList = GenerateAuthorList(0);
          public static ArrayList<Essay> essayList = GenerateEssayList(0, authorList);
+         static    ArrayList<String> nounList = new ArrayList(
+                Arrays.asList("John", "James", "Alex", "Alfredo", "Ali", "AhMeng")
+        );
 
+        static ArrayList<String> verbList = new ArrayList(
+                Arrays.asList("eats", "buys", "cooks", "bakes", "rides")
+        );
 
+        //todo generate date insert static public final for main program 
+        static ArrayList<String> objectList = new ArrayList(
+                Arrays.asList("cow", "pig", "cake", "chicken", "horse")
+        );
+        static ArrayList<String> genreList = new ArrayList(
+                Arrays.asList("adventure", "action", "sci-fi")
+        );
+        static ArrayList<String> authorFirstNameList = new ArrayList(
+                Arrays.asList("John", "James", "Alex", "Alfredo", "Ali", "AhMeng")
+        );
+
+        static ArrayList<String> authorLastNameList = new ArrayList(
+                Arrays.asList("Smith", "Fletcher", "Longman", "Alfredo", "Peanut", "Soda")
+        );
     /**
      * @param args the command line arguments
      */
@@ -34,13 +54,7 @@ public class DSAssignment {
             //default to 30
             count = 30;
         }
-        ArrayList<String> authorFirstNameList = new ArrayList(
-                Arrays.asList("John", "James", "Alex", "Alfredo", "Ali", "AhMeng")
-        );
 
-        ArrayList<String> authorLastNameList = new ArrayList(
-                Arrays.asList("Smith", "Fletcher", "Longman", "Alfredo", "Peanut", "Soda")
-        );
 
         while (count != 0) {
             String authorName1 = authorFirstNameList.get(ThreadLocalRandom.current().nextInt(authorFirstNameList.size()));
@@ -59,21 +73,7 @@ public class DSAssignment {
             count = 150;
         }
         //load the assets here
-        ArrayList<String> nounList = new ArrayList(
-                Arrays.asList("John", "James", "Alex", "Alfredo", "Ali", "AhMeng")
-        );
 
-        ArrayList<String> verbList = new ArrayList(
-                Arrays.asList("eats", "buys", "cooks", "bakes", "rides")
-        );
-
-        //todo generate date insert static public final for main program 
-        ArrayList<String> objectList = new ArrayList(
-                Arrays.asList("cow", "pig", "cake", "chicken", "horse")
-        );
-        ArrayList<String> genreList = new ArrayList(
-                Arrays.asList("adventure", "action", "sci-fi")
-        );
         //todo generates essay List
         while (count != 0) {
             Essay essay = new Essay();
