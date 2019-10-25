@@ -48,7 +48,7 @@ public class DSAssignment {
     }
 
     public static ArrayList<Author> GenerateAuthorList(int count) {
-        ArrayList<Author> AuthorList = new ArrayList<>();
+        ArrayList<Author> generatedAuthorList = new ArrayList<>();
 
         if (count == 0) {
             //default to 30
@@ -60,14 +60,14 @@ public class DSAssignment {
             String authorName1 = authorFirstNameList.get(ThreadLocalRandom.current().nextInt(authorFirstNameList.size()));
             authorName1 += " " + authorLastNameList.get(ThreadLocalRandom.current().nextInt(authorLastNameList.size()));
             Author author = new Author(authorName1);
-            AuthorList.add(author);
+            generatedAuthorList.add(author);
             count--;
         }
-        return AuthorList;
+        return generatedAuthorList;
     }
 
     public static ArrayList<Essay> GenerateEssayList(int count, ArrayList<Author> authorList) {
-        ArrayList<Essay> essayList = new ArrayList<>();
+        ArrayList<Essay> generatedEssayList = new ArrayList<>();
         if (count == 0) {
             //default to 150
             count = 150;
@@ -83,8 +83,8 @@ public class DSAssignment {
             essay.generateTitle(nounList, verbList, objectList);
             essay.selectGenre(genreList);
             count--;
-            essayList.add(essay);
+            generatedEssayList.add(essay);
         }
-        return essayList;
+        return generatedEssayList;
     }
 }
