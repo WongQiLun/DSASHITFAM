@@ -18,7 +18,7 @@ public class MainUI extends javax.swing.JFrame {
      */
     public MainUI() {
         initComponents();
-        btnSearch.setBackground(Color.yellow);
+        
     }
 
     /**
@@ -47,12 +47,18 @@ public class MainUI extends javax.swing.JFrame {
         lblTitle.setText("Essay Search Engine");
         lblTitle.setToolTipText("");
 
-        txtSearch.setToolTipText("Type any word...");
+        txtSearch.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        txtSearch.setToolTipText("Type anything you want to search (Title. Author, etc)");
 
-        btnSearch.setBackground(new java.awt.Color(216, 181, 40));
+        btnSearch.setBackground(new java.awt.Color(102, 102, 0));
         btnSearch.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("SEARCH !");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -71,7 +77,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addGap(93, 93, 93))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(277, 277, 277))))
+                        .addGap(275, 275, 275))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,9 +90,9 @@ public class MainUI extends javax.swing.JFrame {
                         .addGap(8, 8, 8)))
                 .addGap(18, 18, 18)
                 .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
+                .addGap(33, 33, 33)
                 .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -106,6 +112,12 @@ public class MainUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        SearchResults s = new SearchResults();
+        s.setVisible(true);
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments
